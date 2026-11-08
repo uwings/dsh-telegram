@@ -34,14 +34,26 @@ Telegram ──getUpdates(long poll)──▶ Bridge ──agents.create/resume�
 
 ## 安装
 
-要求：DSH runtime（Node 22+）、一个 Telegram bot token。
+要求：DSH runtime（Node 20+）、一个 Telegram bot token。
+
+### 从插件市场安装
+
+DSH 的 Discover 读取的是用户配置的 index URL。本仓库自带一个：
+
+```
+https://uwings.github.io/dsh-telegram/market/index.json
+```
+
+在 Settings → Plugins 里加入这个 URL，然后搜索 `dsh-telegram` 安装即可（source 是 Git，按 commit 钉住，不需要 npm）。
+
+### 手动安装
 
 1. 把 `packages/dsh-telegram` 放进你的工作区，并在 profile 的 `package.json` 里用 `link:` 指向它。
 2. 在 profile 的 `cordis.patch.yml` 加一段：
 
 ```yaml
 - id: telegram
-  name: '@deepseek-hermes/dsh-telegram'
+  name: '@uwings/dsh-telegram'
   config:
     token: ''                      # 留空则读 DSH_TELEGRAM_TOKEN
     allowedUserIds: [123456789]    # 必填或显式 allowAllUsers: true

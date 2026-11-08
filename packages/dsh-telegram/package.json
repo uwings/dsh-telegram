@@ -1,8 +1,7 @@
 {
-  "name": "@deepseek-hermes/dsh-telegram",
-  "version": "0.4.2",
-  "private": true,
-  "description": "Telegram Bot API bridge for DeepSeek Harness agents: long polling, per-chat sessions, rich-message rendering, draft streaming, retry ledger.",
+  "name": "@uwings/dsh-telegram",
+  "version": "0.5.0",
+  "description": "Telegram Bot API channel plugin for DeepSeek Harness: rich messages, media in/out, voice transcription, inline buttons, per-chat sessions.",
   "type": "module",
   "exports": {
     ".": "./index.js",
@@ -15,12 +14,36 @@
     "docs/*.md",
     "cordis.patch.yml",
     "locale/*.json",
-    "icon.svg"
+    "icon.svg",
+    "README.md",
+    "LICENSE"
   ],
   "engines": {
+    "node": ">=20",
     "dsh": ">=0.2.1 <0.3.0"
   },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "telegram",
+    "telegram-bot",
+    "chatbot",
+    "channel"
+  ],
+  "author": "uwings",
   "license": "MIT",
+  "homepage": "https://github.com/uwings/dsh-telegram#readme",
+  "bugs": {
+    "url": "https://github.com/uwings/dsh-telegram/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uwings/dsh-telegram.git",
+    "directory": "packages/dsh-telegram"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
