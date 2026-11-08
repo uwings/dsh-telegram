@@ -1,0 +1,39 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [20, 22]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Unit tests
+        run: |
+          set -euo pipefail
+          for f in tests/*.test.mjs; do
+            echo "::group::$f"
+            node "$f"
+            echo "::endgroup::"
+          done
+
+      - name: Portability guard (no absolute user paths)
+        run: |
+          set -euo pipefail
+          if grep -rInE '[A-Za-z]:\\Users\\|[A-Za-z]:/Users/' packages tests; then
+            echo "::error::absolute user path leaked into sources"
+            exit 1
+          fi
+          echo "no absolute user paths found"
