@@ -1,4 +1,6 @@
-# dsh-telegram
+# dsh-telegram-channel
+
+Telegram 通道插件，npm 包名 `dsh-telegram-channel`。仓库名沿用 `dsh-telegram`——这个 npm 名字已被另一个同类项目占用，所以包名加了 `-channel` 后缀。
 
 [![tests](https://github.com/uwings/dsh-telegram/actions/workflows/tests.yml/badge.svg)](https://github.com/uwings/dsh-telegram/actions/workflows/tests.yml)
 
