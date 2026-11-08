@@ -1,0 +1,5 @@
+# Bundle patch: insert the telegram Host plugin row.
+# User config lives in the profile's own patch layer (target the `telegram` id).
+- insert:
+    - id: telegram
+      name: '@deepseek-hermes/dsh-telegram'

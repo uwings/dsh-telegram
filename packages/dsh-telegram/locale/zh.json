@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Telegram 桥接",
+    "description": "把 Telegram 聊天接入 DeepSeek Harness：草稿流式、重试账本、白名单与每聊天会话。"
+  }
+}

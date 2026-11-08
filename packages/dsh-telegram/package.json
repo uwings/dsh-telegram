@@ -1,0 +1,29 @@
+{
+  "name": "@deepseek-hermes/dsh-telegram",
+  "version": "0.4.2",
+  "private": true,
+  "description": "Telegram Bot API bridge for DeepSeek Harness agents: long polling, per-chat sessions, rich-message rendering, draft streaming, retry ledger.",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "lib/*.js",
+    "docs/*.md",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "engines": {
+    "dsh": ">=0.2.1 <0.3.0"
+  },
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+node_modules/
+state/
+.dshhome/
+*.log
+*.bak*
+.DS_Store
+__pycache__/
+*.pyc

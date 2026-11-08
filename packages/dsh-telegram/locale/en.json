@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Telegram bridge",
+    "description": "Connects Telegram chats to DeepSeek Harness agents with draft streaming, retries, and allowlists."
+  }
+}
