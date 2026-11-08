@@ -1,5 +1,5 @@
-﻿# Bundle patch: insert the telegram Host plugin row.
+# Bundle patch: insert the telegram Host plugin row.
 # User config lives in the profile's own patch layer (target the `telegram` id).
 - insert:
     - id: telegram
-      name: '@uwings/dsh-telegram'
+      name: 'dsh-telegram-channel'

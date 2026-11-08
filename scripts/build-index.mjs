@@ -35,7 +35,7 @@ const index = {
   plugins: [
     {
       name: pkg.name,
-      title: { en: "dsh-telegram", zh: "dsh-telegram" },
+      title: { en: "dsh-telegram-channel", zh: "dsh-telegram-channel" },
       description: {
         en: "Rich messages, media in and out, voice transcription, inline buttons, per-chat sessions.",
         zh: "富文本、媒体收发、语音转写、行内按钮、按会话隔离。",

@@ -1,6 +1,6 @@
 {
-  "name": "@uwings/dsh-telegram",
-  "version": "0.5.0",
+  "name": "dsh-telegram-channel",
+  "version": "0.5.1",
   "description": "Telegram Bot API channel plugin for DeepSeek Harness: rich messages, media in/out, voice transcription, inline buttons, per-chat sessions.",
   "type": "module",
   "exports": {

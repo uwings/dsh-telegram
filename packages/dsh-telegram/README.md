@@ -1,4 +1,4 @@
-# @uwings/dsh-telegram
+# dsh-telegram-channel
 
 把 Telegram 接成 DeepSeek Harness (DSH) 的对话渠道：长轮询、按 chat 保会话、富文本渲染、媒体收发、语音转写、行内按钮。
 
@@ -10,7 +10,7 @@
 
 ```yaml
 - id: telegram
-  name: '@uwings/dsh-telegram'
+  name: 'dsh-telegram-channel'
   config:
     token: ''
     allowedUserIds: [123456789]
