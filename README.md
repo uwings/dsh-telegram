@@ -1,5 +1,7 @@
 # dsh-telegram
 
+[![tests](https://github.com/uwings/dsh-telegram/actions/workflows/tests.yml/badge.svg)](https://github.com/uwings/dsh-telegram/actions/workflows/tests.yml)
+
 把 Telegram 接成 **DeepSeek Harness (DSH)** 的一条对话渠道。长轮询收发、按 chat 保会话、富文本渲染、图片/文件/语音双向、行内按钮、发送重试账本。
 
 > A Telegram Bot API channel plugin for DeepSeek Harness: rich messages, media in/out, voice transcription, inline buttons, per-chat sessions.
