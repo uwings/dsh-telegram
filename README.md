@@ -168,6 +168,15 @@ python tests/e2e_telegram_plugin.py
 
 会启动一个隔离 profile，指向本地假 Bot API，跑通多轮对话、`/stop`、图片落盘。
 
+## 发布（维护者）
+
+1. 改 `packages/dsh-telegram/package.json` 的 `version`，提交这一步。
+2. `node scripts/build-index.mjs` —— 把该版本的 `name@version` 和当前 commit 写进 `market/index.json`（受限环境可传 `GIT_COMMIT=<sha>`）。
+3. 提交并推送；GitHub Pages 会自动发布新的 index。
+4. 可选：`npm publish --access public`（先 `npm login`，`@uwings` scope）。
+
+index 地址：`https://uwings.github.io/dsh-telegram/market/index.json`
+
 ## 限制
 
 - 一个 bot token 只能有一个轮询者；切换部署时要先停旧的。
