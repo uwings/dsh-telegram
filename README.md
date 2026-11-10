@@ -46,7 +46,9 @@ DSH 的 Discover 读取的是用户配置的 index URL。本仓库自带一个�
 https://uwings.github.io/dsh-telegram/market/index.json
 ```
 
-在 Settings → Plugins 里加入这个 URL，然后搜索 `dsh-telegram-channel` 安装即可（source 是 Git，按 commit 钉住，不需要 npm）。
+在 Settings → Plugins 里加入这个 URL，然后搜索 `dsh-telegram-channel` 安装即可（source 是 npm，`dsh-telegram-channel@0.5.1`）。
+
+也可以直接在 profile 目录 `pnpm add dsh-telegram-channel@0.5.1`。
 
 ### 手动安装
 

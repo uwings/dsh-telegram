@@ -21,6 +21,13 @@ const dirty = process.env.GIT_COMMIT
   ? ""
   : execFileSync("git", ["status", "--porcelain"], { cwd: root }).toString().trim();
 
+// INDEX_SOURCE=git pins the package directory at a commit instead of npm.
+const sourceType = process.env.INDEX_SOURCE === "git" ? "git" : "npm";
+const source =
+  sourceType === "git"
+    ? { type: "git", url: "https://github.com/uwings/dsh-telegram", commit, path: "packages/dsh-telegram" }
+    : { type: "npm" };
+
 if (dirty) {
   console.warn("warning: working tree has uncommitted changes; the index still pins HEAD, commit first.");
 }
@@ -49,7 +56,7 @@ const index = {
         {
           version: pkg.version,
           publishTimestamp: Math.floor(Date.now() / 1000),
-          source: { type: "git", url: "https://github.com/uwings/dsh-telegram", commit, path: "packages/dsh-telegram" },
+          source,
           engines: { dsh: pkg.engines?.dsh ?? ">=0.2.1 <0.3.0" },
         },
       ],

@@ -19,7 +19,7 @@
         "en": "Rich messages, media in and out, voice transcription, inline buttons, per-chat sessions.",
         "zh": "富文本、媒体收发、语音转写、行内按钮、按会话隔离。"
       },
-      "icon": "https://raw.githubusercontent.com/uwings/dsh-telegram/26aa011079cd757f72cc256e76647571c9f5b79b/packages/dsh-telegram/icon.svg",
+      "icon": "https://raw.githubusercontent.com/uwings/dsh-telegram/efc1d0c/packages/dsh-telegram/icon.svg",
       "author": "uwings",
       "homepage": "https://github.com/uwings/dsh-telegram#readme",
       "repository": {
@@ -38,12 +38,9 @@
       "versions": [
         {
           "version": "0.5.1",
-          "publishTimestamp": 1794144952,
+          "publishTimestamp": 1794304235,
           "source": {
-            "type": "git",
-            "url": "https://github.com/uwings/dsh-telegram",
-            "commit": "26aa011079cd757f72cc256e76647571c9f5b79b",
-            "path": "packages/dsh-telegram"
+            "type": "npm"
           },
           "engines": {
             "dsh": ">=0.2.1 <0.3.0"
